@@ -1,0 +1,187 @@
+* {
+    font-family: Poppins, sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+  color: white;
+  
+  }
+  
+  
+  
+  footer, #contact, #welcome-section {
+  width: 100vw;
+    display: flex;
+  align-items: center;
+  }
+  
+  #navbar {
+    text-align: right;
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+     background-color: #be3144; 
+  }
+  
+  #navbar a {
+    text-decoration: none;
+    padding: inherit;
+    font-size: 1.6rem;
+  }
+  
+  #navbar a:hover {
+    text-decoration: none;
+    padding: inherit;
+    background-color: #45567d;
+  }
+  
+  @media (max-width: 500px) {
+    #navbar a {
+    font-size: 1.2rem;
+  }
+  }
+  
+  body {
+    width: 100%;
+    text-align: center;
+  }
+  
+  #welcome-section {
+    background-color: gray;
+    height: 100vh;
+   justify-content: center;
+   flex-direction: column;
+  }
+  
+  #welcome-section p {
+  color: #be3144;
+  font-weight: lighter;
+  font-size: 20px;
+  letter-spacing: 1px;
+  }
+  
+  #projects {
+    background-color: #45567d;
+    padding-bottom: 60px;
+  }
+  
+  h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  
+  hr {
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  .projekty-flex img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    
+  }
+  
+  .projekty-flex {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    justify-content: center;
+    margin: 20px auto;
+  }
+  
+  .opis-obrazka {
+    background-color: gray;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  font-size: 1.4rem;
+  
+  }
+  
+  .projekty-flex a {
+    margin: 20px;
+    text-decoration: none;
+    
+  }
+  
+  .opis-obrazka .brackets {
+    display: inline;
+    margin: 0 5px;
+   color: gray;
+   transition: color 0.5s ease-out 0ms;
+  }
+  
+  .projekty-flex a:hover .brackets {
+    
+    color: orange;
+  }
+  
+  #profile-link {
+    text-decoration: none;
+    width: 250px;
+    background-color: gray;
+    font-size: 20px;
+    padding: 20px;
+    margin: 0px auto;
+    display: block;
+    transition: background-color 0.5s ease-out 0ms;
+    color: white;
+  }
+  
+  #profile-link:hover {
+   background-color: #be3144;
+  }
+  
+  #profile-link .brackets {
+    display: inline;
+    position: relative;
+    transition: left 0.5s ease-out 0ms;
+    left: 0px;
+    font-weight: bold;
+  }
+  
+  #profile-link:hover .brackets {
+    left: 5px;
+  }
+  
+  #contact {
+    height: 79vh;
+    background-color: gray;
+    
+   justify-content: center;
+   flex-direction: column;
+  }
+  
+  #spol-link i {
+    scale: 2.0;
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+    position: relative;
+    top: 0;
+    transition: top 0.5s ease-out 0s;
+  }
+  
+  #spol-link i:hover {
+    top: 10px;
+  }
+  
+  footer {
+    height: 20vh;
+    border-top: 1vh solid orange;
+    background-color: gray;
+   justify-content: flex-end;
+  }
+  
+  footer p {
+    margin-right: 50px;
+  }
+  
+  .project-tile {
+    font-size: 25px;
+    padding-top: 30px;
+  }
