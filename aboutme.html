@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akash Kumar - Front-end Developer - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Cinzel">
+          <script src="https://kit.fontawesome.com/74e6202d3e.js" crossorigin="anonymous"></script>
+ 
+  </head>
+  <body>
+    <section id="aboutme">
+   <div id='introduce'>
+        <span id="introduceflex">
+          <img src="myphoto.png" id="myphoto">
+    <h1>My name is Akash</h1>
+<h1>And what is your name?</h1> 
+<input type="text" id="username" placeholder="Your Name">
+</span>
+    </div>
+<div id="afterintroduce">
+    <span id="introduceflex">
+
+<h1 id="usergreeting">Hello!</h1>
+<h1>Let me introduce myself</h1>
+<button id="introducebutton">Okay!</button>
+</span>
+</div>
+
+<div id="bio">
+  <span id="introduceflex">
+<h3>I'm a Front-End Developer living in Poland. </h3>
+<h1>Why Front-End?</h1>
+<p>All my life I've been working in different areas of art. I'm a:</p>
+<ul>
+<li class="artarea musician">Musician <i class="fa-solid fa-circle-down arrowdescription arrow1"></i>
+  </li><li id="musiciandescription">
+	- Bachelor degree at Wroclaw's Academy of Music, specialty: tuba<br>
+	- Professional musician at Representative Band of Land Forces in Wroclaw, instruments: tuba, bass guitar, electric guitar<br>
+	- Creator of OneArmyManPL YouTube channel -> https://www.youtube.com/channel/UCxqZRajs4P8rbzwf6SFBVSg
+</li>
+</li>
+<li class="artarea dancer">
+  Dancer<i class="fa-solid fa-circle-down arrowdescription arrow2"></i>
+</li><li id="dancerdescription">
+	- salsa, bachata, zouk teacher with 12 years of experience, I taught around Poland and abroad (Czech Republic, Ukraine, Germany, Austria, Malta, Belarus, Netherlands)<br>
+	- performer (shows at the biggest Polish dance festivals and abroad)<br>
+	- dance group leader (Project Freakchata)
+</li>
+
+<li class="artarea dj">
+  DJ<i class="fa-solid fa-circle-down arrowdescription arrow3"></i>
+</li><li id="djdescription">
+
+	- I performed at many dance events around Poland and abroad, including Czech Republic, Netherlands, Ukraine
+</li>
+
+<li class="artarea editor">
+  Video editor<i class="fa-solid fa-circle-down arrowdescription arrow4"></i>
+</li><li id="editordescription">
+	- I edited videos for army band, dance projects, music projects
+</li>
+
+</ul>   
+
+<p>
+    Recently I made a decision to dive into IT world and because of my artistic influence my obvious choice was Front-End Development.<br>
+Dear <span id="useraddressing"></span>, I would like to help you by turning your website idea into reality, using my skills to help you grow your business, design your blog, set up your hobby page.
+</p>
+</span>
+</div>
+</section>
+<script>
+/* BIO ART DESCRIPTIONS */
+let musicianDescription = document.getElementById("musiciandescription")
+let dancerDescription = document.getElementById("dancerdescription")
+let djDescription = document.getElementById("djdescription")
+let editorDescription = document.getElementById("editordescription")
+let musician = document.getElementsByClassName("musician")[0]
+let dancer = document.getElementsByClassName("dancer")[0]
+let dj = document.getElementsByClassName("dj")[0]
+let editor = document.getElementsByClassName("editor")[0]
+var html = document.body.parentNode;   
+
+html.addEventListener('click', function(event) {
+  if (musician.contains(event.target) || dancer.contains(event.target) || dj.contains(event.target) || editor.contains(event.target)) {
+  } else {
+  
+  dancerDescription.style.height = "0"
+  dancerDescription.style.paddingTop = "0"
+  musicianDescription.style.height = "0"
+  musicianDescription.style.paddingTop = "0"
+  djDescription.style.height = "0"
+  djDescription.style.paddingTop = "0"
+  editorDescription.style.height = "0"
+  editorDescription.style.paddingTop = "0"
+  }
+})
+
+musician.onclick = () => {
+  console.log("siemanko")
+  dancerDescription.style.height = "0"
+  dancerDescription.style.paddingTop = "0"
+  musicianDescription.style.height = "120px"
+  musicianDescription.style.paddingTop = "5px"
+  djDescription.style.height = "0"
+  djDescription.style.paddingTop = "0"
+  editorDescription.style.height = "0"
+  editorDescription.style.paddingTop = "0"
+}
+
+dancer.onclick = () => {
+  console.log("siemanko")
+  dancerDescription.style.height = "120px"
+  dancerDescription.style.paddingTop = "5px"
+  musicianDescription.style.height = "0"
+  musicianDescription.style.paddingTop = "0"
+  djDescription.style.height = "0"
+  djDescription.style.paddingTop = "0"
+  editorDescription.style.height = "0"
+  editorDescription.style.paddingTop = "0"
+}
+
+dj.onclick = () => {
+  console.log("siemanko")
+  dancerDescription.style.height = "0"
+  dancerDescription.style.paddingTop = "0"
+  musicianDescription.style.height = "0"
+  musicianDescription.style.paddingTop = "0"
+  djDescription.style.height = "50px"
+  djDescription.style.paddingTop = "5px"
+  editorDescription.style.height = "0"
+  editorDescription.style.paddingTop = "0"
+}
+
+editor.onclick = () => {
+  console.log("siemanko")
+  dancerDescription.style.height = "0"
+  dancerDescription.style.paddingTop = "0"
+  musicianDescription.style.height = "0"
+  musicianDescription.style.paddingTop = "0"
+  djDescription.style.height = "0"
+  djDescription.style.paddingTop = "0"
+  editorDescription.style.height = "30px"
+  editorDescription.style.paddingTop = "5px"
+}
+
+
+
+
+let userGreeting = document.getElementById('usergreeting')
+let userAddressing = document.getElementById("useraddressing")
+let userName = document.getElementById('username')
+let introduce = document.getElementById('introduce')
+let afterIntroduce = document.getElementById('afterintroduce')
+
+var input = document.getElementById("username");
+
+// Execute a function when the user presses a key on the keyboard
+input.addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    userGreeting.innerHTML = `Hello <span class='usernamecolor'>${userName.value}!</span>`;
+    userAddressing.innerHTML = `<span class='usernamecolor2'>${userName.value}</span>`;
+    introduce.style.opacity = "0"
+    afterIntroduce.style.opacity = "1"
+    afterIntroduce.style.zIndex = "2"
+
+    
+  }
+}); 
+
+let wyswietl = () => {
+    let szerokosc = introduce.style.height
+    console.log(szerokosc)
+}
+window.onclick = wyswietl
+
+let introduceButton = document.getElementById("introducebutton")
+let bio = document.getElementById("bio")
+
+introduceButton.onclick = () => { 
+  bio.style.opacity = "1"
+  bio.style.zIndex = "4"
+  afterIntroduce.style.opacity = "0"
+  afterIntroduce.style.zIndex = '-1'
+}
+
+
+  </script>
+  </body>
+</html>
