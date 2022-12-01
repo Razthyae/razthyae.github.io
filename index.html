@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Cinzel">
+       
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,700;1,100&display=swap" rel="stylesheet"> 
           <script src="https://kit.fontawesome.com/74e6202d3e.js" crossorigin="anonymous"></script>
  
   </head>
@@ -55,8 +59,8 @@
   <div id='introduce'>
        <span id="introduceflex">
         <img src="myphoto.jpg" id="myphoto">
-   <h1>My name is Akash</h1>
-<h1>And what is your name?</h1> 
+   <h1>I'm Akash</h1>
+<h1>And what is <span class="bluecolored">your</span> name?</h1> 
 <input type="text" id="username" placeholder="Your Name">
 </span>
    </div>
@@ -109,7 +113,7 @@
 </ul>   
 
 <p>
-   Recently I made a decision to dive into IT world and because of my artistic influence my obvious choice was Front-End Development.<br>
+   Recently I made a decision to dive into IT world and because of my artistic influence my obvious choice was <span class="bluecolored">Front-End Development</span>.<br>
 Dear <span id="useraddressing"></span>, I would like to help you by turning your website idea into reality, using my skills to help you grow your business, design your blog, set up your hobby page.
 </p>
 </span>
@@ -203,7 +207,7 @@ musician.onclick = () => {
   console.log("siemanko")
   dancerDescription.style.height = "0"
   dancerDescription.style.paddingTop = "0"
-  musicianDescription.style.height = "120px"
+  musicianDescription.style.height = "95px"
   musicianDescription.style.paddingTop = "5px"
   djDescription.style.height = "0"
   djDescription.style.paddingTop = "0"
@@ -213,7 +217,7 @@ musician.onclick = () => {
 
 dancer.onclick = () => {
   console.log("siemanko")
-  dancerDescription.style.height = "120px"
+  dancerDescription.style.height = "95px"
   dancerDescription.style.paddingTop = "5px"
   musicianDescription.style.height = "0"
   musicianDescription.style.paddingTop = "0"
@@ -229,7 +233,7 @@ dj.onclick = () => {
   dancerDescription.style.paddingTop = "0"
   musicianDescription.style.height = "0"
   musicianDescription.style.paddingTop = "0"
-  djDescription.style.height = "50px"
+  djDescription.style.height = "40px"
   djDescription.style.paddingTop = "5px"
   editorDescription.style.height = "0"
   editorDescription.style.paddingTop = "0"
@@ -243,7 +247,7 @@ editor.onclick = () => {
   musicianDescription.style.paddingTop = "0"
   djDescription.style.height = "0"
   djDescription.style.paddingTop = "0"
-  editorDescription.style.height = "30px"
+  editorDescription.style.height = "20px"
   editorDescription.style.paddingTop = "5px"
 }
 
@@ -265,7 +269,7 @@ input.addEventListener("keypress", function(event) {
     // Cancel the default action, if needed
     event.preventDefault();
     // Trigger the button element with a click
-    userGreeting.innerHTML = `Hello <span class='usernamecolor'>${userName.value}!</span>`;
+    userGreeting.innerHTML = `Hello <br><span class='usernamecolor'>${userName.value}!</span>`;
     userAddressing.innerHTML = `<span class='usernamecolor2'>${userName.value}</span>`;
     introduce.style.opacity = "0"
     afterIntroduce.style.opacity = "1"

@@ -1,7 +1,9 @@
 :root {
 --granat: rgb(10, 0, 39);
---fiolet: rgb(47, 0, 42);
+--fiolet: rgb(77, 0, 72);
 --jasny: #d4ddf5;
+--trzeci: #009A9B;
+--czwarty: #F60067;
 
 } 
 
@@ -10,14 +12,15 @@
 * {
     
     color: var(--jasny);
- 
-    font-family: "Cinzel";
+    font-family: inherit;
+    
     
 }
 
 a, button {
     text-decoration: none;
     transition-property: background-color;
+    
     border-radius: 10px;
     transition-duration: 0.2s;
     padding: 8px;
@@ -36,11 +39,13 @@ a:hover, button:hover {
 }
 
 
+
 #rozdzielnik {
     height: 300px;
 }
 
 header {
+    font-family: "Cinzel";
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -141,7 +146,8 @@ margin-bottom: 40px;
 */
 
 body {
-    background-image: linear-gradient(90deg, var(--granat), var(--fiolet));
+ background-image: linear-gradient(90deg, var(--granat), var(--fiolet)); 
+ /* background-image: url("dupencja.png"); */
     width: 100vw;
 }
 
@@ -150,7 +156,7 @@ position: fixed;
 display: flex;
 top: 210px;       
 height: 350px;
-
+font-family: "Cinzel";
 left: -166px;
 transition-property: left;
 transition-duration: 1s;
@@ -290,7 +296,11 @@ article {
 
   #username {
     background-color: transparent;
+    border: 2px solid var(--trzeci);
     font-size: 30px;
+    border-radius: 90px;
+    color: var(--jasny);
+    padding-left: 20px;
   }
 
   #aboutme {
@@ -300,7 +310,8 @@ article {
     padding: auto;
     margin: 0;
   
-  }
+font-family: "Cinzel";
+}
 
 #introduce, #afterintroduce, #bio {
   
@@ -333,12 +344,13 @@ article {
 }
 
 .usernamecolor {
-    color: white;
-    font-size: 45px;
+    color: var(--trzeci);
+    font-size: 75px;
+    font-weight: bold;
 }
 
 .usernamecolor2 {
-    color: white;
+    color: var(--trzeci);
     font-size: 25px;
 }
 
@@ -349,15 +361,21 @@ article {
     
 }
 
+
 button {
-    background-color: transparent;
+    background-color: var(--trzeci);
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    
+    border-radius: 90px;
 }
 
 
 /* zmienic opacity z powrotem na 0 i z-index na -1*/
 
 #bio {
-    
+    font-family: "Montserrat";
     opacity: 0;
     z-index: 5;
     transition-property: opacity;
@@ -383,6 +401,7 @@ button {
     background-color: var(--jasny);
     color: var(--granat);
     text-align: left;
+    font-size: 0.9em;
     
 }
 
@@ -391,7 +410,7 @@ button {
 li {
  width: 600px;
  border: 1px solid var(--jasny);
- border-radius: 10px;
+ border-radius: 12px;
  padding-left: 30px;
  display: flex;
  justify-content: space-between;
@@ -411,6 +430,8 @@ li {
 .artarea {
     transition-property: background-color, color;
     transition-duration: 0.2s;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 
@@ -426,4 +447,30 @@ li {
     border-radius: 180px;
     background-color: transparent;
  
+}
+
+#bio > #introduceflex > h3 {
+    font-weight: 300;
+    font-size: 30px;
+}
+
+
+#bio > #introduceflex > h1 {
+    color: var(--trzeci);
+    font-weight: 1100;
+    font-size: 40px;
+}
+
+.bluecolored {
+    color: var(--trzeci);
+    font-size: 1.3em
+}
+
+ul {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#usergreeting {
+    margin-bottom: 50px;
 }
